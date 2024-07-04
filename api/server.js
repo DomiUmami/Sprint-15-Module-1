@@ -29,13 +29,13 @@ server.use(session({
   resave: false,
   store: new Store({
     knex,
-    creatTable: true,
+    createTable: true,
     clearInterval: 1000 * 60 * 10,
     tablename: 'sessions',
     sidfieldname: 'sid',
   }),
   cookie: {
-    mexAge: 1000 * 60 * 10, 
+    maxAge: 1000 * 60 * 10, 
     secure: false,
     httpOnly: true,
     //sameSite: 'none'
